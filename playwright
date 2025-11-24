@@ -1,0 +1,81 @@
+what is playwright?
+playwright is a fast web automation tool by microsoft that supports chromium, firefox ,
+web kit that supports auto wait and parallel execution capabilities
+
+why playwright over selenium?
+ Auto waiting
+ fast
+ modern architecture- client server architecture(sel-w3c)
+ better selectors
+ parallel execution
+ built in reporting and tracing- HTML/playwright trace viewer
+
+ core playwright API?
+
+ launching browser
+ browser=p.chromium.launch(headless=False)
+
+browser context?
+A Browser Context is like a separate, independent browser profile inside the same browser instance.
+It has:
+Its own cookies
+Local storage
+Session data
+Cache
+Permissions
+So each context behaves like a fresh user, without affecting other tests.
+syntax:
+context=browser.new_context()
+
+new page
+page=context.new_page()
+
+Navigate
+page.goto("url")
+
+fill
+page.fill("locator")
+
+click
+page.click("locator")
+
+Assertions
+expect(page).to_have_title("Dashboard")
+
+Select options
+page.select_option("locator",value)
+
+Locators available in plawright?
+
+CSS selectors-#loginbtn
+text selectors-get_by_text
+xpath
+role based-get_by_role
+
+Auto waiting?
+playwright automatically waits for
+
+element to be attached
+element to be visible
+element to be stable
+events like load, DOM
+
+what is codegen?
+playwright can record your actions and generates the code automaticaly
+ syn: playwright codegen url
+
+POM- helps seperate page locators and actions into classes to make the framework readable and maintainable
+
+pytest basics
+how to mark tests
+@pytest.mark.smoke
+def test_login():
+    pass
+
+how to run tests
+pytest -v
+
+BDD questions
+
+
+from playwright.sync_api impo

@@ -1,0 +1,158 @@
+For a Lead role, these topics are essential:
+
+✔ Basic Git Concepts:
+--------------------------------------------------------------
+
+What is Git: repository, working directory, staging area
+Git is a Distributed Version Control System used to track changes in source code.
+Every developer has a full copy of the repository
+
+Repository
+
+A Repository (repo) is a storage location where all source code and history are stored.
+There are two types:
+Local Repository → On your machine
+Remote Repository → On GitHub, GitLab, Bitbucket, etc.
+
+Working Directory:
+This is the folder on your system where files are created or modified but not yet tracked.
+
+Staging Area
+When you add files (git add), they move from working directory to the staging area, meaning:
+“Files are ready to be committed.”
+
+Git local vs GitHub (remote)
+
+✔ Core Git Commands:
+--------------------------------------------------------------
+git init  :Creates a new empty local repository.
+git clone :Copies an existing remote repository to your machine.
+git status:Shows:Modified files,Staged files,Untracked files
+git add   :Moves files to staging area.
+git commit:Saves the staged changes permanently in local repository.
+git log   :Shows commit history.
+git push  :Uploads local commits to remote GitHub repo.
+git pull  :Pulls latest code from remote and merges automatically into your branch.
+git fetch :Gets latest commits from remote but does NOT merge automatically.
+           You can review changes first — safer than pull.
+
+✔ Branching & Merging:
+-------------------------------------------------
+
+git branch : Lists all branches or creates a new one.
+git checkout / git switch :Moves between branches:checkout → Old traditional command,
+                            switch → New modern command
+git merge : Combines one branch into another.
+Fast-forward merge : If no changes exist in the target branch, Git simply moves the branch pointer forward.
+                     No new merge commit created — clean history
+Three-way merge : Happens when:Both branches have new changes,Git must combine them,
+                  Creates a new merge commit.Used in real corporate projects frequently.
+                    Resolving Merge Conflicts : If two developers edit the same line
+                    Editing conflicting files
+                    Markers (<<<<, ====, >>>>)
+                    Final commit after fixing
+
+✔ Remote Repositories (GitHub):
+
+Add remote : git remote add origin <url>
+Push to remote : git push origin main
+Pull from remote : git pull
+Clone from remote : git clone <url>
+✔ Code Review Workflow
+Pull Requests
+Approvals
+Comments
+
+Merge after review:
+------------------------------------------------------
+
+✔ Git Ignore
+.gitignore file
+Ignoring secrets, logs, build outputs
+✔ Stashing (when switching tasks)
+git stash
+git stash apply
+git stash pop
+✔ Git Reset & Revert
+Undo mistakes safely
+✔ Git Tags
+
+Lightweight & annotated tags:
+------------------------------------------------------------
+
+Used for releases (v1.0, v1.1 etc.):
+------------------------------------------------------------
+
+✔ CI/CD Integration (Expected in Lead Roles):
+------------------------------------------------------------
+Git triggers Jenkins build
+
+Whenever code is pushed or PR is raised, Jenkins pipeline starts automatically.
+
+Webhooks:
+A webhook in Jenkins is a mechanism that automatically triggers a Jenkins job
+when something changes in your Git repository
+GitHub → Jenkins communication.
+
+PR Build Pipelines:
+Before merging
+Tests run
+Linting runs: code level errors
+Selenium/Appium suite runs
+Coverage reports generated
+If build fails → PR cannot be merged.
+This ensures code quality before release.
+Git triggers Jenkins build:
+
+================================================================================================
+installing and working with git:
+check git version:
+git --version
+
+Setup your global username and email once:
+git config --global user.name "ShantappaBajare"
+git config --global user.email "shantappabajare@gmail.com"
+
+Check settings:
+git config --list
+
+Create a folder for your projects:
+mkdir C:\GitRepos
+cd C:\GitRepos
+
+Create your first local repository:
+mkdir demo-project
+cd demo-project
+git init
+
+Create a file:
+echo "print('Hello World')" > app.py
+
+Add file to staging area:
+git add app.py
+
+Commit the file:
+git commit -m "Initial commit"
+
+#Now Git is fully working locally
+
+---------------------------------------------------------------------------
+
+Step to Connect With GitHub:
+-----------------------------
+Create a repository on GitHub
+Do not add README/ .gitignore for first time (optional but simple).
+
+https://github.com
+
+If you don’t have an account → click Sign up and create one.
+If you already have an account → Log in.
+
+git remote add origin https://github.com/ShantappaBajare/demo-project.git
+git branch -M main
+git push -u origin main
+
+
+
+
+

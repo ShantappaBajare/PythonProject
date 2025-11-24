@@ -1,0 +1,16 @@
+pytest
+
+pom-package
+testcases
+actions
+
+test data-direcrectory
+logs-folder
+screenshots
+reports
+
+utility
+ini
+conftest-setting up/tear down / report formattingt--timestamps
+
+@pytest.mark.order/
