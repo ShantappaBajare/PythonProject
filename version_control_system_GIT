@@ -152,6 +152,11 @@ git remote add origin https://github.com/ShantappaBajare/demo-project.git
 git branch -M main
 git push -u origin main
 
+
+check esting origins:
+git remote -v
+
+
 =========================================================================
 pulling a copy from remote:
 
